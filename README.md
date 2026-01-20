@@ -1,11 +1,11 @@
-# LandslideNet
+# Landslide Prediction
 PyTorch implementation of deep learning based landslide prediction using U-Net architecture in convolution neural network.
 
 <p align="center">
   <img src="utils/results.gif" alt="monodepth">
 </p>
 
-**Landslide Detection model with multi-spectral satellite(14 channels) imagery.**
+**Landslide Prediction model with multi-spectral satellite(14 channels) imagery.**
 
 ---
 
