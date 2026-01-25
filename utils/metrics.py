@@ -25,3 +25,17 @@ def calculate_metrics(preds, targets):
     f1 = 2 * (precision * recall) / (precision + recall + 1e-7)
     
     return precision, recall, f1
+
+def calculate_iou(preds, targets, smooth=1e-6):
+    #converting probs to 0 or 1
+    preds = (preds > 0.5).float()
+    
+    #intersection is where both are 1
+    intersection = (preds * targets).sum()
+    
+    #union is area of both combined
+    total = (preds + targets).sum()
+    union = total - intersection
+    
+    iou = (intersection + smooth) / (union + smooth)
+    return iou.item()

@@ -30,8 +30,8 @@ def train(args):
     train_filenames = os.path.join(args.filenames_dir, "train.txt")
     val_filenames = os.path.join(args.filenames_dir, "val.txt")
 
-    train_dataset = LandslideDataset(train_img_path, train_mask_path, train_filenames)
-    valid_dataset = LandslideDataset(train_img_path, train_mask_path, val_filenames)
+    train_dataset = LandslideDataset(train_img_path, train_mask_path, train_filenames, augment=True)
+    valid_dataset = LandslideDataset(train_img_path, train_mask_path, val_filenames, augment=False)
 
     train_loader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True)
     valid_loader = DataLoader(valid_dataset, batch_size=args.batch_size, shuffle=False)
