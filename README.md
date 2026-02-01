@@ -3,6 +3,8 @@ PyTorch implementation of deep learning based landslide prediction using U-Net a
 
 <p align="center">
   <img src="utils/results.gif" alt="monodepth">
+  <img src="utils/training_metrics_50.png" alt="monodepth">
+  <img src="utils/training_metrics_70.png" alt="monodepth">
 </p>
 
 **Landslide Prediction model with multi-spectral satellite(14 channels) imagery.**
